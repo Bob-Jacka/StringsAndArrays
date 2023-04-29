@@ -4,10 +4,11 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestApp {
-        int[] testArray= {
+    int[] testArray = {
             8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18
     };
-        StatsService serv = new StatsService();
+    StatsService serv = new StatsService();
+
     @Test
     public void SummTest() {
         int expected = 180;
@@ -16,8 +17,8 @@ public class TestApp {
 
     @Test
     public void averageSalesPerMonthTest() {
-    double expected = 15.0;
-    Assertions.assertEquals(expected, serv.averageSalesPerMonth(testArray));
+        double expected = 15.0;
+        Assertions.assertEquals(expected, serv.averageSalesPerMonth(testArray));
     }
 
     @Test
@@ -31,13 +32,15 @@ public class TestApp {
         int expected = 9;
         Assertions.assertEquals(expected, serv.HowManyMonthWithDno(testArray));
     }
+
     @Test
-    public void salesUnderAveregeTest() {
+    public void salesUnderAverageTest() {
         int expected = 5;
         Assertions.assertEquals(expected, serv.MonthWithSalesBelowAverage(testArray));
     }
+
     @Test
-    public void salesBelowAveregeTest() {
+    public void salesBelowAverageTest() {
         int expected = 5;
         Assertions.assertEquals(expected, serv.MonthWithSalesAboveAverage(testArray));
     }
